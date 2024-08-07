@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEditor;
+
 using System.Collections.Generic;
 
 public class SerializedStringFinder : EditorWindow
 {
     // The substring to search for
     private string searchString = "";
+
     // The string to replace the search string with
     private string replaceString = "";
+
     // List to hold the results
-    private List<Result> results = new List<Result>();
+    private readonly List<Result> results = new List<Result>();
 
     [MenuItem("Tools/Serialized String Finder")]
     public static void ShowWindow()
